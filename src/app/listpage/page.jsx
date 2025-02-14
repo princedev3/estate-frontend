@@ -1,8 +1,6 @@
 "use client";
-import { listData } from "@/libs/data";
 import Filter from "@/components/Filter";
 import React, { Suspense } from "react";
-import Map from "../../components/Map";
 import Card from "@/components/Card";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useGetAllProductQuery } from "../apis/_index.product.api";

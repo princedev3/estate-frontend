@@ -1,7 +1,5 @@
 "use client";
 import { useGetSingleProductQuery } from "@/app/apis/_index.product.api";
-import Map from "@/components/Map";
-import { listData } from "@/libs/data";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useState } from "react";

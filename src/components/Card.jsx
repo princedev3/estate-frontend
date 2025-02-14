@@ -5,7 +5,7 @@ import useUserStore from "@/store/user-store";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import React from "react";
 import { CiBookmark } from "react-icons/ci";
 
 const Card = ({ item }) => {
