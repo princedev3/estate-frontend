@@ -9,7 +9,7 @@ export const middleware = async (request) => {
   const cookieStore = await cookies();
   const accessToken = cookieStore?.get("accessToken")?.value;
 
-  console.log("Access Token:", accessToken);
+  // console.log("Access Token:", accessToken);
 
   // const accessToken = request.cookies.get("accessToken")?.value;
 
