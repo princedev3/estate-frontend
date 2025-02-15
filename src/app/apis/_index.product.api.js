@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const productApi = createApi({
   reducerPath: "productApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://estate-backend-6esa.onrender.com/api",
+    baseUrl: "http://localhost:5000/api",
     credentials: "include",
   }),
   tagTypes: ["Products"],

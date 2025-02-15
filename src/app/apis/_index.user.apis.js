@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const userApi = createApi({
   reducerPath: "userApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://estate-backend-6esa.onrender.com/api",
+    baseUrl: "http://localhost:5000/api",
     credentials: "include",
   }),
   endpoints: (builder) => ({
@@ -17,6 +17,7 @@ export const userApi = createApi({
     login: builder.mutation({
       query: (userData) => ({
         url: "/auth/login",
+        credentials: "include",
         method: "POST",
         body: userData,
       }),

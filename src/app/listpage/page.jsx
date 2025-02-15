@@ -3,6 +3,7 @@ import Filter from "@/components/Filter";
 import React, { Suspense } from "react";
 import Card from "@/components/Card";
 import { useRouter, useSearchParams } from "next/navigation";
+import Maps from "../../components/map/index";
 import { useGetAllProductQuery } from "../apis/_index.product.api";
 
 const ListPage = () => {
@@ -82,7 +83,9 @@ const ListPage = () => {
         </div>
       </div>
       <div className="flex-[2] hidden lg:flex   pl-4">
-        <Suspense fallback={<p>Loading feed...</p>}></Suspense>
+        <Suspense fallback={<p>Loading feed...</p>}>
+          <Maps />
+        </Suspense>
       </div>
     </div>
   );
