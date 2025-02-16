@@ -28,10 +28,10 @@ const Register = () => {
   };
 
   return (
-    <div className="flex w-[60%] md:w-[95%] mx-auto min-h-screen ">
+    <div className="grid grid-flow-col w-full md:grid-cols-[1.3fr_1fr] h-[calc(100vh-100px)]  max-w-[75rem] mx-auto p-4 md:p-0 ">
       <form
         onSubmit={handleSubmit}
-        className=" flex-[3] flex items-center justify-center w-full  "
+        className=" flex-[3] flex  justify-center w-full  "
       >
         <div className="w-full md:w-[350px]">
           <h1 class="mb-4 text-3xl font-normal capitalize text-center leading-none tracking-tight text-gray-900   dark:text-white">

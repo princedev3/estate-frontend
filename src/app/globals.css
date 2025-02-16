@@ -2,32 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
+html,
+body {
+  overflow-x: hidden !important;
+}
 @layer utilities {
-
-    .no-scrollbar::-webkit-scrollbar {
-      width: 5px;
-      background-color:rgb(236, 235, 235);
-    }
-    .no-scrollbar::-webkit-scrollbar-thumb {
-     
-      background: linear-gradient(rgb(223, 125, 125),rgb(100, 100, 169));
-    }
-  
-   
+  .no-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgb(236, 235, 235);
   }
-  @layer utilities {
-  
-    .no-scrollbar1::-webkit-scrollbar {
-      width: 2px;
-      background-color:rgb(236, 235, 235);
-    }
-    .no-scrollbar1::-webkit-scrollbar-thumb {
-     
-      background: white;
-    }
-  
-   
+  .no-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(rgb(223, 125, 125), rgb(100, 100, 169));
   }
+}
+@layer utilities {
+  .no-scrollbar1::-webkit-scrollbar {
+    width: 2px;
+    background-color: rgb(236, 235, 235);
+  }
+  .no-scrollbar1::-webkit-scrollbar-thumb {
+    background: white;
+  }
+}

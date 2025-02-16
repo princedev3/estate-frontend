@@ -23,11 +23,8 @@ const Login = () => {
     }
   };
   return (
-    <div className="flex w-[60%] md:w-[95%] mx-auto min-h-screen ">
-      <form
-        onSubmit={handleLogin}
-        className=" flex-[3] flex items-center justify-center w-full  "
-      >
+    <div className="grid grid-flow-col w-full md:grid-cols-[1.3fr_1fr] h-[calc(100vh-100px)]  max-w-[75rem] mx-auto p-4 md:p-0">
+      <form onSubmit={handleLogin} className="flex  justify-center w-full  ">
         <div className="w-full md:w-[350px]">
           <h1 className="mb-4 text-4xl font-normal capitalize text-center leading-none tracking-tight text-gray-900 md:text-5xl  dark:text-white">
             welcome back
@@ -64,7 +61,7 @@ const Login = () => {
           </Link>
         </div>
       </form>
-      <div className="flex-[2] bg-[#fcf5f3] relative  hidden md:flex">
+      <div className=" bg-[#fcf5f3] relative  hidden md:flex">
         <Image src="/bg.png" alt="" fill className="object-cover" />
       </div>
     </div>

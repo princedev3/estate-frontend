@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Marker, Popup } from "react-leaflet";
 
-const Pin = ({ item, key }) => {
+const Pin = ({ item }) => {
   const icon = L.icon({
     iconUrl:
       "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png",
@@ -13,7 +13,7 @@ const Pin = ({ item, key }) => {
     className: "object-contain",
   });
   return (
-    <div key={key}>
+    <div>
       <Marker position={[item?.latitude, item?.longitude]} icon={icon}>
         <Popup>
           <div className="flex gap-1 w-full">

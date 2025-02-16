@@ -34,7 +34,7 @@ const ListPage = () => {
   };
   const handleNext = () => {
     const currentPage = parseInt(query.page);
-    if (currentPage < data.count / POST_PER_PAGE) {
+    if (currentPage < data?.count / POST_PER_PAGE) {
       paramHelperFunc((currentPage + 1).toString());
     }
   };
@@ -45,8 +45,9 @@ const ListPage = () => {
     }
   };
   return (
-    <div className="flex h-full  w-[95%] mx-auto">
-      <div className="flex-[3] w-full relative lg:overflow-y-scroll no-scrollbar h-screen">
+    <div className="grid grid-flow-col w-full md:grid-cols-[1.3fr_1fr]   max-w-[75rem] mx-auto px-4 xl:px-0">
+      {/* left */}
+      <div className=" w-full relative lg:overflow-y-auto   no-scrollbar  ">
         <div className="pr-[20px]  w-full relative ">
           <Filter query={query} />
           <div className="my-[2rem]   w-full flex flex-col gap-11 ">
@@ -72,7 +73,8 @@ const ListPage = () => {
               <button
                 onClick={handleNext}
                 disabled={
-                  Math.ceil(data?.count / POST_PER_PAGE) === Number(query.page)
+                  Math.ceil(data?.count / POST_PER_PAGE) ===
+                    Number(query.page) || Number(data?.count) === 0
                 }
                 className="text-white disabled:cursor-not-allowed bg-blue-700 hover:bg-blue-800 w-fit  font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 disabled:bg-red-600"
               >
@@ -82,7 +84,9 @@ const ListPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex-[2] hidden lg:flex   pl-4">
+
+      {/* right */}
+      <div className=" hidden md:flex h-[calc(100vh-100px)] w-full ">
         <Suspense fallback={<p>Loading feed...</p>}>
           <Maps />
         </Suspense>

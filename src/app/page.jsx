@@ -8,7 +8,7 @@ const Home = () => {
   const user = useUserStore((state) => state.user);
 
   return (
-    <div className="min-h-[calc(100vh-100px)] ">
+    <div className="grid w-full items-center max-w-[75rem] mx-auto ">
       <Hero />
     </div>
   );

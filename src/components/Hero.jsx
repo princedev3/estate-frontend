@@ -3,9 +3,10 @@ import React from "react";
 import Search from "./Search";
 
 const Hero = () => {
+  // max-h-screen
   return (
-    <div className="md:w-[95%] flex mx-auto h-full ">
-      <div className="flex-[3] ">
+    <div className="flex mx-auto h-full w-full ">
+      <div className="flex-[3]   ">
         <div className="flex flex-col gap-8 w-full p-4 ">
           <h2 className="text-3xl font-semibold">
             find real estates & get your dream place find real estate & get yor
@@ -44,7 +45,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-[2] bg-[#fcf5f3] relative h-[calc(100vh-100px)]  hidden md:flex">
+      <div className="flex-[2] bg-[#fcf5f3] relative   hidden md:flex">
         <Image src="/bg.png" fill className="object-cover" alt="" />
       </div>
     </div>

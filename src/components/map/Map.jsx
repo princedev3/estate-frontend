@@ -13,10 +13,10 @@ import { listData } from "../../libs/data";
 
 const Map = () => {
   return (
-    <main className=" w-[100%] h-screen relative">
+    <main className=" w-full h-full  relative">
       <MapContainer
-        center={[51.505, -0.09]}
-        zoom={13}
+        center={[53.4808, -2.2426]}
+        zoom={11}
         scrollWheelZoom={false}
         style={{ height: "100%", width: "100%" }}
       >
